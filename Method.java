@@ -20,7 +20,7 @@ public class Method {
     Scanner scan = new Scanner(System.in);
     int answer = Integer.parseInt(scan.nextLine());
 
-    public String Method1(String a) {
+    public void Method1() {
         Scanner scan = new Scanner(System.in);
         String userInput = scan.nextLine().toLowerCase();
         userInput.split("");
@@ -34,7 +34,6 @@ public class Method {
             }
         }
         System.out.println("Translate: " + userResult);
-        return userResult;
     }
 
     public void Method2() {

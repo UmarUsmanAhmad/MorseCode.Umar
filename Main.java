@@ -11,7 +11,7 @@ public class Main {
         //Vilkor
         if (s.answer == 1) {
             System.out.println("Write any letter you want to convert from English to Morse: ");
-            s.Method1("");
+            s.Method1();
 
         } else if (s.answer == 2) {
             System.out.println("Write any letter you want to convert from Morse to English: ");
