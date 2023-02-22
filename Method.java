@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Method {
 
-
+    //Attributes/Variables
     String[] english = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
             "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x",
             "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
@@ -20,7 +20,7 @@ public class Method {
     Scanner scan = new Scanner(System.in);
     int answer = Integer.parseInt(scan.nextLine());
 
-    public void Method1() {
+    public String Method1(String a) {
         Scanner scan = new Scanner(System.in);
         String userInput = scan.nextLine().toLowerCase();
         userInput.split("");
@@ -34,7 +34,7 @@ public class Method {
             }
         }
         System.out.println("Translate: " + userResult);
-
+        return userResult;
     }
 
     public void Method2() {
@@ -53,7 +53,6 @@ public class Method {
             }
             System.out.println("Translate: " + userResult);
         }
-
     }
 }
 
