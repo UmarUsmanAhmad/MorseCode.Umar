@@ -12,10 +12,10 @@ public class TestMorse {
 
     public void TestLettertoMorse() {
         //Object
-        Main data = new Main();
+        Method data = new Method();
         String a = "A";
 
-        String actual = data.Method3(a);
+        String actual = data.Method1(a);
 
         String expected = ".-";
         Assertions.assertEquals(expected, actual);
@@ -24,9 +24,9 @@ public class TestMorse {
     @Test
     public void TestMorsetoLetter() {
 
-        Main data = new Main();
+        Method data = new Method();
         String b = ".-";
-        String actual = data.Method4(b);
+        String actual = data.Method2(b);
 
         String expected = "A";
         Assertions.assertEquals(expected, actual);
@@ -35,13 +35,11 @@ public class TestMorse {
     @Test
     public void TestWordtoMorse() {
 
-        Main data = new Main();
+        Method data = new Method();
         String c = "ABC";
-        String actual = data.Method5(c);
+        String actual = data.Method3(c);
 
         String expected = ".--...-.-.";
         Assertions.assertEquals(expected, actual);
     }
-
 }
-
