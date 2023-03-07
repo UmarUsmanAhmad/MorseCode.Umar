@@ -1,9 +1,7 @@
 package UppgiftMorsecode;
-import java.util.Arrays;
-import java.util.Scanner;
+
 
 public class Method {
-
 
     //Attributes/Variables
     public String[] english = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
@@ -16,48 +14,46 @@ public class Method {
             "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----",
             "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
             "-----", "--..--", ".-.-.-", "..--.."};
+    String getresult = "";
 
-    public String userResult = "";
+    public String Method1(String userInput) {
+        String[] userCopy = userInput.split("");
 
-    public String Method1(String Text1) {
-        Scanner scan = new Scanner(System.in);
-        String userInput = scan.nextLine().toLowerCase();
-        userInput.split("");
-
-
-
-        for (int j = 0; j < userInput.length(); j++) {
+        for (String s : userCopy) {
             for (int i = 0; i < english.length; i++) {
-                if (english[i].equals(String.valueOf(userInput.charAt(j)))) {
-                    userResult += morse[i];
+                if (english[i].equals(s)) {
+                    getresult += morse[i];
                 }
             }
         }
-        System.out.println("Translate: " + userResult);
-
-        return userResult;
+        return getresult;
     }
 
     public String Method2(String Text2) {
-        Scanner scan = new Scanner(System.in);
-
-        String userInput = scan.nextLine();
-
-        String userResult = Arrays.toString(userInput.split(" "));
 
         for (int j = 0; j < 1; j++) {
             for (int i = 0; i < morse.length; i++) {
 
-                if (userInput.equals(morse[i])) {
-                    userResult = english[i];
+                if (Text2.equals(morse[i])) {
+                    getresult = english[i];
                 }
             }
-            System.out.println("Translate: " + userResult);
         }
-        return userResult;
+        return getresult;
     }
 
+    public String Method3(String userInput) {
+        String[] userCopy = userInput.split("");
 
+        for (int j = 0; j < userCopy.length; j++) {
+            for (int i = 0; i < english.length; i++) {
+                if (english[i].equals(userCopy[j])) {
+                    getresult += morse[i];
+                }
+            }
+        }
+        return getresult;
+    }
 }
 
 

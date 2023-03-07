@@ -3,45 +3,43 @@ package UppgiftMorsecode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
 
 public class TestMorse {
 
 
     @Test
 
-    public void TestLettertoMorse() {
+    public void TestEnglishtoMorse() {
 
-        Method data = new Method();
-        String a = "A";
+        Method data1 = new Method();
+        String a = ".-";
+        String actual = data1.Method1(a);
+        String expected = data1.getresult;
 
-        String actual = data.Method1("");
+        Assertions.assertEquals(expected, actual);
+    }
 
-        String expected = ".-";
+
+    @Test
+    public void TestMorsetoEnglish() {
+
+        Method data2 = new Method();
+        String b = "A";
+        String actual = data2.Method2(b);
+        String expected = data2.getresult;
+
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void TestMorsetoLetter() {
-
-        Method data = new Method();
-        String b = ".-";
-        String actual = data.Method2("");
-
-        String expected = "A";
-        Assertions.assertEquals(expected, actual);
-    }
-
-  /*  @Test
     public void TestWordtoMorse() {
 
-        Method data = new Method();
+        Method data3 = new Method();
         String c = "ABC";
-        String actual = data.Method3(c);
-
+        String actual = data3.Method3(c);
+        String expected = data3.getresult;
 
         Assertions.assertEquals(expected, actual);
     }
 
-   */
 }
